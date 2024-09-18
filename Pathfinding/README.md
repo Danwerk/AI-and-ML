@@ -1,3 +1,48 @@
+This project compares three pathfinding algorithms
+- **Breadth-First Search**
+- **Greedy Search**
+- **Astar search**
+The algorithms are tested on a grid-based map with obstacles, and the goal is to find a path from a starting point to an ending point.
+
+## Algorithms
+
+### Breadth-First Search (BFS)
+BFS explores all nodes at the present "depth" level before moving on to nodes at the next depth level. It is guaranteed to find the shortest path in an unweighted grid.
+
+### Greedy Best-First Search (Greedy)
+Greedy Best-First Search uses a heuristic to estimate the cost to the goal and chooses paths that appear to be leading towards the goal most quickly. It is not guaranteed to find the shortest path.
+
+### A* Search (A*)
+A* Search combines features of BFS and Greedy. It uses a heuristic to estimate the cost to the goal and also considers the cost to reach the current node. It is guaranteed to find the shortest path if the heuristic is admissible.
+
+## Map Format
+
+The map is represented as a list of strings where:
+- `'*'` denotes obstacles.
+- `'s'` denotes the starting point.
+- `'D'` denotes the ending point.
+- Spaces denote walkable areas.
+
+Here is the example map:
+``` 
+    "      **               **      ",
+    "     ***     D        ***      ",
+    "     ***                       ",
+    "                      *****    ",
+    "           ****      ********  ",
+    "           ***          *******",
+    " **                      ******",
+    "*****             ****     *** ",
+    "*****              **          ",
+    "***                            ",
+    "              **         ******",
+    "**            ***       *******",
+    "***                      ***** ",
+    "                               ",
+    "                s              ",
+```
+
+## Results
 The results of BFS:
 ```
 Cave300x300:

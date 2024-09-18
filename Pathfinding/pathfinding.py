@@ -205,10 +205,10 @@ def a_star(lava_map):
     print(f"A*: Time to find solution: {result_time:.2f} ms")
     print(f"A*: Number of iterations: {iterations}")
     print(f"A*: Length of solution in steps: {path_length}")
-    # print_solution(lava_map, path)
+    # print_path(lava_map, path)
 
 
-def print_solution(lava_map, path):
+def print_path(lava_map, path):
     # Convert the map into a list of lists so we can modify it
     map_copy = [list(row) for row in lava_map]
 
